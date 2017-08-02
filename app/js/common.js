@@ -17,4 +17,10 @@ $(function() {
     }
 	})
 
+
+	$('.sub_menu ul').hide();
+	$(".sub_menu a").click(function () {
+	  $(this).parent(".sub_menu").children("ul").slideToggle("500");
+	});
+
 });

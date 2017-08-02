@@ -63,8 +63,15 @@ body
 		a
 			color: #000	
 
+	.mobile_nav
+		.mobile_nav__wrap
+			height: 50px
+			background-color: #3670dc
+			margin-bottom: 10px
 	.main_nav
-		ul
+
+		ul.main_menu
+			
 			padding: 0
 			list-style-type: none
 			width: 100%
@@ -75,10 +82,35 @@ body
 			align-items: center
 			li
 				display: inline-block	
-				
+				position: relative
 				a
 					color: #fff
 					text-transform: uppercase	
+					i
+						color: #fff
+						margin-left: 10px
+		.sub_menu ul
+
+			padding: 0
+			position: absolute
+			z-index: 100
+			top: 135%
+			left: 0
+			min-width: 130%
+			background-color: #ccc
+			border-bottom: 4px solid #3670dc
+
+			li
+				border-left: 4px solid transparent
+				transition: all .25s ease
+				&:hover
+					border-left: 4px solid #3670dc
+				display: block
+				a
+					color: #000
+					padding: 5px 20px 5px 10px
+
+
 
 .s-slider
 	.item
@@ -86,27 +118,29 @@ body
 		.item_text
 			position: absolute
 			color: #fff
-			width: 60%
-			margin-left: 15%
-			margin-top: 5%
+			width: 70%
+			top: 50%
+			left: 50%
+			transform: translate(-50% , -50%)
 			.h1
 				line-height: 1.4
+				font-size: 46px
 			p
 				font-size: 18px
-			button
-				background-color: #5782c5
-				border: none
-				padding: 10px 30px
-				border-radius: 3px
-				transition: color .25s ease
-				&:hover
-					color: #ccc
 		.image_wrap
 			text-align: center
 			img
 				width: 100%
 				height: auto
 				display: inline-block
+button
+	background-color: #5782c5
+	border: none
+	padding: 10px 30px
+	border-radius: 3px
+	transition: color .25s ease
+	&:hover
+		color: #ccc
 
 .owl-carousel
 	position: relative
@@ -137,7 +171,7 @@ body
 .owl-theme 
 	.owl-dots
 		position: absolute
-		bottom: 20px
+		bottom: 0px
 		width: 100%
 		text-align: center
 		.owl-dot
@@ -159,13 +193,34 @@ body
 		padding: 0
 		li
 			margin-bottom: 10px
-			p
+			p.data
 				font-size: 12px
+				color: #a2a2a2
 			a
 				text-decoration: underline	
 
+
+.mail
+	background-color: #2d3e4f
+	margin-top: 40px
+	.mail_wrap
+		color: #fff
+		display: flex
+		justify-content: space-around
+		align-items: center
+		flex-wrap: wrap
+		input
+			width: 60%
+			color: #000
+			border: none
+		h3
+			text-transform: uppercase
+			font-size: 16px
+		button
+			padding: 4px  20px		
+
 .footer
-	
+	margin: 30px 0 20px
 	.footer_wrap
 		border-top: 1px solid #e8e8e8
 		padding: 20px 0
